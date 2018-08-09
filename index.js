@@ -9,12 +9,12 @@ var server = http.createServer(function(req, res) {
 
 	*/
 
-	var url = encodeURIComponent(JSON.stringify({"json":[{"img-url":"https://i.kym-cdn.com/entries/icons/original/000/021/807/4d7.png"}]}))
-
     res.writeHead(200, {"Content-Type": "application/json"});
-    res.end(url);
+    res.end(JSON.stringify({ a : encodeURIComponent("https://i.kym-cdn.com/entries/icons/original/000/021/807/4d7.png") }, null, 3));
 
 });
+
+//https://i.kym-cdn.com/entries/icons/original/000/021/807/4d7.png
 
 var port = process.env.PORT || 1337;
 server.listen(port);
