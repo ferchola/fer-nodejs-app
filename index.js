@@ -9,7 +9,7 @@ var server = http.createServer(function(req, res) {
 
 	*/
 
-    response.writeHead(200, {"Content-Type": "application/json"});
+    res.writeHead(200, {"Content-Type": "application/json"});
     res.end(JSON.stringify({ a: 1 }, null, 3));
 
 });
