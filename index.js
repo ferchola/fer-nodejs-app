@@ -9,8 +9,8 @@ var server = http.createServer(function(req, res) {
 
 	*/
 
-    res.setHeader('Content-Type', 'application/json');
-    res.send(JSON.stringify({ a: 1 }, null, 3));
+    res.writeHead('Content-Type', 'application/json');
+    res.end(JSON.stringify({ a: 1 }, null, 3));
 
 });
 
