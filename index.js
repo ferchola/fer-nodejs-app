@@ -1,6 +1,6 @@
 var http = require('http');
 
-var server = http.createServer(function(request, response) {
+var server = http.createServer(function(req, res) {
 
     /*
     response.writeHead(200, {"Content-Type": "text/plain"});
@@ -8,8 +8,7 @@ var server = http.createServer(function(request, response) {
     	+ "You are visiting us using ----> " + request.headers['user-agent']);
 
 	*/
-	
-    var app = http.createServer(function(req,res){
+
     res.setHeader('Content-Type', 'application/json');
     res.send(JSON.stringify({ a: 1 }, null, 3));
 
